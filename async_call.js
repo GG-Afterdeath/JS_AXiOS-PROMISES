@@ -8,9 +8,9 @@ const url = 'https://dbd-api.herokuapp.com/killers'
 let r = request(url,
                 {json: true},
                 (error, respuesta, body) => { 
-                    let dinosaurios = body
-                    dinosaurios.forEach((dinosaurio)=>{
-                        console.log(dinosaurio.Name)
+                    let resp = body
+                    resp.forEach((killer)=>{
+                        console.log(killer.Name)
                         console.log('--------------')
                     })
                  })
